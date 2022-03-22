@@ -14,21 +14,22 @@ from datetime import datetime
 from speedtest import Speedtest
 from userbot import CMD_HANDLER as cmd, CMD_HELP, StartTime
 from userbot.events import register
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, jim_cmd
 
 absen = [
+    "**Eh ada kitaro**",
     "**Hadir ganteng** 🥵",
     "**Hadir bro** 😎",
     "**Hadir kak** 😉",
-    "**Hadir bang** 😁",
-    "**Hadir kak maap telat** 🥺",
+    "**Hadir bang kitaro** 😁",
+    "**Hadir kak maap telat** 🥺",,
 ]
 
 pacar = [
-    "**Saya Hadir Untuk Membasmi Para Jamet Telegram** 😎 ",
+    "**Mau Ga Bg Jadi Pacar Ku** 😫 ",
     "**Iya Bang kenapa?**",
     "**Uuyy Bang**",
-    "**Hadir uyy** 😁",
+    "**Hadir Beb** 😁",
     "**Saya Hadir Untuk Melindungi Cewe Dari Laki Laki Sangean** 😎",
 ]
 
@@ -60,17 +61,17 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(incoming=True, from_users=1663258664, pattern=r"^.absen$")
-async def _(kyy):
-    await kyy.reply(random.choice(absen))
+@register(incoming=True, from_users=2077846555, pattern=r"^.absen$")
+async def _(jim):
+    await jim.reply(random.choice(absen))
 
 
-@register(incoming=True, from_users=1663258664, pattern=r"^.kyy$")
-async def _(kyy):
-    await kyy.reply(random.choice(pacar))
+@register(incoming=True, from_users=2077846555, pattern=r"^.jim$")
+async def _(jim):
+    await jim.reply(random.choice(pacar))
 
 
-@kyy_cmd(pattern="sping$")
+@jim_cmd(pattern="sping$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     await get_readable_time((time.time() - StartTime))
@@ -86,11 +87,11 @@ async def redis(pong):
     await xx.edit(
         f"**[{user.first_name}](tg://user?id={user.id}) **        \n"
         f"**➾Kecepatan : ** '%sms'  \n"
-        f"**➾Branch : ** 'Kyy-Userbot` \n" % (duration)
+        f"**➾Branch : ** 'JM-Userbot` \n" % (duration)
     )
 
 
-@kyy_cmd(pattern="lping$")
+@jim_cmd(pattern="lping$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
@@ -108,7 +109,7 @@ async def redis(pong):
     )
 
 
-@kyy_cmd(pattern="xping$")
+@jim_cmd(pattern="xping$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
@@ -125,7 +126,7 @@ async def redis(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await xping.edit(
-        f"**✨ҡʏʏ-υѕєявσт✨**\n"
+        f"**🤡ᴊᴍ-ųʂɛɾႦσƚ🤡**\n"
         f"➾ __Signal__    __:__ "
         f"`%sms` \n"
         f"➾ __Uptime__ __:__ "
@@ -133,7 +134,7 @@ async def redis(pong):
     )
 
 
-@kyy_cmd(pattern="sinyal$")
+@jim_cmd(pattern="sinyal$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
@@ -150,7 +151,7 @@ async def redis(pong):
     duration = (end - start).microseconds / 1000
     user = await pong.client.get_me()
     await sinyal.edit(
-        f"**✨ ҡʏʏ-υѕєявσт ✨**\n\n"
+        f"**🤡 ᴊᴍ-ųʂɛɾႦσƚ 🤡**\n\n"
         f"** ▹  Sɪɢɴᴀʟ   :** "
         f"`%sms` \n"
         f"** ▹  Uᴘᴛɪᴍᴇ  :** "
@@ -159,7 +160,7 @@ async def redis(pong):
     )
 
 
-@kyy_cmd(pattern="ping$")
+@jim_cmd(pattern="ping$")
 async def pingme(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
@@ -178,7 +179,7 @@ async def pingme(pong):
     )
 
 
-@kyy_cmd(pattern="kecepatan$")
+@jim_cmd(pattern="kecepatan$")
 async def speedtst(spd):
     """For .speed command, use SpeedTest to check server speeds."""
     kecepatan = await edit_or_reply(spd, "**Sedang Menjalankan Tes Kecepatan Jaringan,Mohon Tunggu...**")
@@ -203,7 +204,7 @@ async def speedtst(spd):
         f"`{result['ping']}` \n"
         "✧ **ISP:** "
         f"`{result['client']['isp']}` \n"
-        "✧ **BOT:** ✨ҡʏʏ-υѕєявσт✨"
+        "✧ **BOT:** 🤡ᴊᴍ-ųʂɛɾႦσƚ🤡"
     )
 
 
@@ -220,21 +221,21 @@ def speed_convert(size):
     return f"{round(size, 2)} {units[zero]}"
 
 
-@kyy_cmd(pattern="pong$")
+@jim_cmd(pattern="pong$")
 async def pingme(pong):
     """For .ping command, ping the userbot from any chat."""
     start = datetime.now()
     pong = await edit_or_reply(pong, "**◕‿- PONG!!🏓**")
     await asyncio.sleep(1)
-    await pong.edit("✨")
+    await pong.edit("🤡")
     await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 9000
     user = await pong.client.get_me()
-    await pong.edit(f"**✨KyyName : [{user.first_name}](tg://user?id={user.id}) **\n📗 `%sms`" % (duration))
+    await pong.edit(f"**✨JimName : [{user.first_name}](tg://user?id={user.id}) **\n📗 `%sms`" % (duration))
 
 
-@kyy_cmd(pattern="pink$")
+@jim_cmd(pattern="pink$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
