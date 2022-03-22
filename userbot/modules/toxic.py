@@ -1,196 +1,196 @@
 from platform import uname
 from userbot import ALIVE_NAME, CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, jim_cmd
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@kyy_cmd(pattern='d(?: |$)(.*)')
+@jim_cmd(pattern='d(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**BACOT NGENTOTTT!!BAPA LU SURUH RIBUT SAMA GUA**")
+    await edit_or_reply(typew, "**DARAH GUA SAMA DARAH LU BEDA, KAN LU DARAH NYA CUPU GA ADA NYALI**")
 
 
-@kyy_cmd(pattern='e(?: |$)(.*)')
+@jim_cmd(pattern='e(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**GAK USAH SOK KERAS GOBLOK!!KENCING MASIH BERDIRI AJA BELAGU**")
+    await edit_or_reply(typew, "**EEELAAHH DEK DEK MENDING JANGAN DISINI CAPER NYA GAUSA BELAGU KONTOL**")
 
 
-@kyy_cmd(pattern='f(?: |$)(.*)')
+@jim_cmd(pattern='f(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**MUKA LU SEMUA KAYA KONTOL HAHAHAHA!!**")
+    await edit_or_reply(typew, "**FUCK MEN ANJAYY KERENN BET YA INGGRIS GUA**")
 
 
-@kyy_cmd(pattern='i(?: |$)(.*)')
+@jim_cmd(pattern='i(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**KONTOL MASIH BENGKOK AJA BANGGA LU HAHAHAHA!!**")
+    await edit_or_reply(typew, "**INI LAH BOCAH GOBLOG GA PUNYA OTAK SAKSIKAN LAH!!**")
 
 
-@kyy_cmd(pattern='r(?: |$)(.*)')
+@jim_cmd(pattern='r(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**KONTOL KONTOL APA YANG BESAR?KONTOL LU LAH HAHAHAHA!!**")
+    await edit_or_reply(typew, "**RANDOM SEKALI YA EPRIBADII DASAR PENJILAT!!**")
 
 
-@kyy_cmd(pattern='t(?: |$)(.*)')
+@jim_cmd(pattern='t(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**BABI!!KONTOL!!NGENTOT!!!**")
+    await edit_or_reply(typew, "**TERLENA SAYA LIAT TYPINGAN MU DEEK TERHARU SEKALI SEGITU NYA MENCERITAKAN DIRI SENDIRI**")
 
 
-@kyy_cmd(pattern='u(?: |$)(.*)')
+@jim_cmd(pattern='u(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**BABI LU GOBLOK!!GANTENGAN JUGA GUA HAHAHAHA**")
+    await edit_or_reply(typew, "**UNTUK MU YANG LAGI DUDUK SAMBIL DISKUSI, WKWKW DISKUSI DENGAN NGEBACOT GITU? GOBLOK**")
 
 
-@kyy_cmd(pattern='w(?: |$)(.*)')
+@jim_cmd(pattern='w(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**BABI LU GOBLOK!!CANTIKAN JUGA GUA HAHAHAHA**")
+    await edit_or_reply(typew, "**WAH ADA PETAROENK NGEERIIII **")
 
 
-@kyy_cmd(pattern='z(?: |$)(.*)')
+@jim_cmd(pattern='z(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**BACOTAN LU GAK BIKIN GUA TREMOR GOBLOK HAHAHAHA!!**")
+    await edit_or_reply(typew, "**MUKA LU ITU MIRIP KATAK ZUMA TAU GA LU? JELEK BET ANJG HAHAHA!!**")
 
 
-@kyy_cmd(pattern='k(?: |$)(.*)')
+@jim_cmd(pattern='k(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**HAI PERKENALKAN NAMA SAYA GAK TAU LUPA!!**")
+    await edit_or_reply(typew, "**KONTOL GAYA² DOANG TERNYATA..!!**")
 
 
-@kyy_cmd(pattern='n(?: |$)(.*)')
+@jim_cmd(pattern='n(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**GIMANA KABAR KAMU SAYANG??APAKAH BAIK?**")
+    await edit_or_reply(typew, "**NANTI GIMANA KALO KITA BAKAL JODOH? AWW SOSWIT**")
 
 
-@kyy_cmd(pattern='b(?: |$)(.*)')
+@jim_cmd(pattern='b(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**ELEEEHHHH SOK BANGET KEPINTERAN KAMU!!**")
+    await edit_or_reply(typew, "**BHAKS KOCAK KALI KAU!!**")
 
 
-@kyy_cmd(pattern='m(?: |$)(.*)')
+@jim_cmd(pattern='m(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**INI GRUB APA KUBURAN SEPI BANGET ASTAGFIRULLAH!!**")
+    await edit_or_reply(typew, "**MELIHAT ORANG² YANG GA TAU DI UNTUNG!!**")
 
 
-@kyy_cmd(pattern='c(?: |$)(.*)')
+@jim_cmd(pattern='c(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**KAN UDAH GUA BILANG??MAKANYA JANGAN NGEYEL!!**")
+    await edit_or_reply(typew, "**CIH, HARAM KAMU PERGI SANA JANGAN DEKAT DEKAT!!**")
 
 
-@kyy_cmd(pattern='s(?: |$)(.*)')
+@jim_cmd(pattern='s(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**GAUSAH SOKAP DEH KAMU!!**")
+    await edit_or_reply(typew, "**SAMA AKU AJA PACARANNYA MAU GA?**")
 
 
-@kyy_cmd(pattern='v(?: |$)(.*)')
+@jim_cmd(pattern='v(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**MACAM BAGUS AE LU BEGITU HMM!!**")
+    await edit_or_reply(typew, "**VARIASI INI SANGAT LAH TIDAK JELAS!!**")
 
 
-@kyy_cmd(pattern='j(?: |$)(.*)')
+@jim_cmd(pattern='j(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**MAAF BUKAN JAGOAN HAHAHAHA!!**")
+    await edit_or_reply(typew, "**JADI LAH ORANG SPESIAL DIHIDUP KU (TAPI BOONG)**")
 
 
-@kyy_cmd(pattern='a(?: |$)(.*)')
+@jim_cmd(pattern='a(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**BISMILLAH SLEEP CALL!!😁**")
+    await edit_or_reply(typew, "**AKU, RAJA MEKSIKO, ELMATADORE SALVADOR TEQUILA EL KONTOLLE **")
 
 
-@kyy_cmd(pattern='g(?: |$)(.*)')
+@jim_cmd(pattern='g(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**GANTENG LU BEGITU???**")
+    await edit_or_reply(typew, "**GA MASUK DI AKAL BET ANJG**")
 
 
-@kyy_cmd(pattern='y(?: |$)(.*)')
+@jim_cmd(pattern='y(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**War War Tai anjing, Ketrigger minta sharelok, Udah di sharelok Ga nyamperin,Keras di sosmed Bhakss...**")
+    await edit_or_reply(typew, "**YAA DAH SELALU BENAR...**")
 
 
-@kyy_cmd(pattern='h(?: |$)(.*)')
+@jim_cmd(pattern='h(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**CANTIK LU BEGITU???**")
+    await edit_or_reply(typew, "**HAHAHAH KENA MENTAL YA DEK? KASIAN YA**")
 
 
-@kyy_cmd(pattern='o(?: |$)(.*)')
+@jim_cmd(pattern='o(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**MENTANG MENTANG PUNYA BOT MAINNYA BOT!!PANTES MUKANYA KAYA BOT😁**")
+    await edit_or_reply(typew, "**O AJA SI**")
 
 
-@kyy_cmd(pattern='1(?: |$)(.*)')
+@jim_cmd(pattern='1(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await edit_or_reply(typew, "**NORAK LU KONTOL!! MAKE USERBOT CUMAN BUAT WAR MALAH SOK KERAS**")
+    await edit_or_reply(typew, "**NORAK LU KONTOL!!**")
 
 
 CMD_HELP.update({
     "toxic":
     f"{cmd}d\
-\nUsage: Bacotin Orang.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}e\
-\nUsage: Buat Orang Yang Sok Keras.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}f\
-\nUsage: Ngatain Orang Wkwkkw.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}i\
-\nUsage: Kontol Orang Ngatain.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}r\
-\nUsage: Pantun Anjing.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}t\
-\nUsage: Nyebutin Binatang.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}u\
-\nUsage: Biar Dikata Ganteng.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}w\
-\nUsage: Biar Dikata Cantik.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}z\
-\nUsage: Tremor Kan Lu.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}k\
-\nUsage: Memperkenalkan Diri.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}n\
-\nUsage: Menanyakan Kabar.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}b\
-\nUsage: Sok Kepinteran.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}m\
-\nUsage: Gc Nya Kaya kuburan.\
+\nUsage: lihat sendiri.\
 \n\\{cmd}c\
-\nUsage: Dia tuh Ngeyel banget.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}s\
-\nUsage: Haha sokap.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}v\
-\nUsage: Merendah.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}a\
-\nUsage: Nyari Sleep Call.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}j\
-\nUsage: Hujat yang gapunya muka.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}g\
-\nUsage: Kegantengan.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}y\
-\nUsage: teruntuk petarung.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}h\
-\nUsage: Kecantikan.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}o\
-\nUsage: Ngatain org norak.\
+\nUsage: lihat sendiri.\
 \n\n{cmd}1\
-\nUsage: Ngatain Petarunx Tele."
+\nUsage: lihat sendiri."
 })
