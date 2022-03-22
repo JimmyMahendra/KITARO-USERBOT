@@ -1,67 +1,67 @@
 from time import sleep
 from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, jim_cmd
 
 
-@kyy_cmd(pattern="jamet(?: |$)(.*)")
+@jim_cmd(pattern="jamet(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    x = await edit_or_reply(typew, "**WOII**")
+    x = await edit_or_reply(typew, "**HEYY**")
     sleep(1.5)
-    await x.edit("**JAMET KONTOL**")
+    await x.edit("**JAMET TOLOL**")
     sleep(1.5)
-    await x.edit("**CUMA MAU BILANG**")
+    await x.edit("**GAUSA BELAGU GITU NAPA**")
     sleep(1.5)
-    await x.edit("**GAUSAH SO ASIK**")
+    await x.edit("**GAUSA SOK ASIK MEMEK**")
     sleep(1.5)
-    await x.edit("**EMANG KENAL?**")
+    await x.edit("**EMANG LU SIAPA??**")
     sleep(1.5)
-    await x.edit("**GAUSAH REPLY**")
+    await x.edit("**NGEREPLY GUA**")
     sleep(1.5)
-    await x.edit("**KITA BUKAN KAWAN**")
+    await x.edit("**LU KAGA KENAL GUAA**")
     sleep(1.5)
-    await d.edit("**GASUKA PC ANJING**")
+    await d.edit("**JADI GAUSA SOKAB KONTOL**")
     sleep(1.5)
-    await x.edit("**BOCAH KAMPUNG**")
+    await x.edit("**DASAR BOCAH KAMPUNG**")
     sleep(1.5)
-    await x.edit("**MENTAL TEMPE**")
+    await x.edit("**MENTAL KERUPUK**")
     sleep(1.5)
-    await x.edit("**LEMBEK NGENTOT🔥**")
+    await x.edit("**LEMBEK NGENTOT😜**")
 
 
-@kyy_cmd(pattern="pp(?: |$)(.*)")
+@jim_cmd(pattern="pp(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew,
-                        "**PASANG PP DULU NGENTOT,BIAR ORANG-ORANG PADA TAU BETAPA HINA NYA MUKA LU 😆**"
+                        "**GAUSA BELAGU KALO PP MASI PINTEREST ATAU PP ANIME NGNTD MAKANYA PASANG BIAR ORANG TAU BETAPA HINANYA MUKA LU ITU 😆**"
                         )
 
 
-@kyy_cmd(pattern="dp(?: |$)(.*)")
+@jim_cmd(pattern="dp(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "**MUKA LU HINA, GAUSAH SOK KERAS YA NGENTOT!!**")
 
 
-@kyy_cmd(pattern="so(?: |$)(.*)")
+@jim_cmd(pattern="so(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "**GAUSAH SOKAB SAMA GUA NGENTOT, LU BABU GA LEVEL!!**")
 
 
-@kyy_cmd(pattern="nb(?: |$)(.*)")
+@jim_cmd(pattern="nb(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "**MAEN BOT MULU ALAY NGENTOTT, KESANNYA NORAK GOBLOK!!!**")
 
 
-@kyy_cmd(pattern="met(?: |$)(.*)")
+@jim_cmd(pattern="met(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "**NAMANYA JUGA JAMET CAPER SANA SINI BUAT CARI NAMA BHAHAHA**")
 
 
-@kyy_cmd(pattern="war(?: |$)(.*)")
+@jim_cmd(pattern="war(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(event,
@@ -69,7 +69,7 @@ async def typewriter(typew):
                         )
 
 
-@kyy_cmd(pattern="wartai(?: |$)(.*)")
+@jim_cmd(pattern="wartai(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew,
@@ -77,7 +77,7 @@ async def typewriter(typew):
                         )
 
 
-@kyy_cmd(pattern="kismin(?: |$)(.*)")
+@jim_cmd(pattern="kismin(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew,
@@ -85,13 +85,13 @@ async def typewriter(typew):
                         )
 
 
-@kyy_cmd(pattern="ded(?: |$)(.*)")
+@jim_cmd(pattern="ded(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "**MATI AJA LU GOBLOK, GAGUNA LU HIDUP DI BUMI**")
 
 
-@kyy_cmd(pattern="sokab(?: |$)(.*)")
+@jim_cmd(pattern="sokab(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew,
@@ -99,7 +99,7 @@ async def typewriter(typew):
                         )
 
 
-@kyy_cmd(pattern="gembel(?: |$)(.*)")
+@jim_cmd(pattern="gembel(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew,
@@ -107,7 +107,7 @@ async def typewriter(typew):
                         )
 
 
-@kyy_cmd(pattern="cuih(?: |$)(.*)")
+@jim_cmd(pattern="cuih(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew,
