@@ -17,7 +17,7 @@ from .start import startupmessage
 from . import format as _format
 from .format import parse_pre
 from .chrome import chrome, options
-from .decorator import asst_cmd, callback, kyy_cmd, kyy_handler
+from .decorator import asst_cmd, callback, jim_cmd, jim_handler
 from .google_images_download import googleimagesdownload
 from .progress import progress, CancelProcess
 from .tools import (
@@ -34,4 +34,11 @@ from .tools import (
     edit_or_reply,
     media_type,
 )
-from .utils import autobot, load_module, remove_plugin, start_assistant, create_supergroup
+from .utils import (
+    autobot,
+    load_module,
+    remove_plugin,
+    start_assistant,
+    create_supergroup,
+    autopilot,
+)
