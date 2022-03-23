@@ -12,7 +12,12 @@ from random import randint
 
 import heroku3
 from telethon.tl.functions.contacts import UnblockRequest
-
+from telethon.tl.functions.channels import (
+    CreateChannelRequest,
+)
+from telethon.tl.types import (
+    ChatAdminRights,
+)
 from userbot import (
     BOT_TOKEN,
     BOTLOG_CHATID,
@@ -44,7 +49,7 @@ async def autobot():
     if who.username:
         username = who.username + "_ubot"
     else:
-        username = "kyy" + (str(who.id))[5:] + "ubot"
+        username = "jim" + (str(who.id))[5:] + "ubot"
     bf = "@BotFather"
     await bot(UnblockRequest(bf))
     await bot.send_message(bf, "/cancel")
@@ -77,7 +82,7 @@ async def autobot():
     await bot.send_read_acknowledge("botfather")
     if isdone.startswith("Sorry,"):
         ran = randint(1, 100)
-        username = "kyy" + (str(who.id))[6:] + str(ran) + "ubot"
+        username = "jim" + (str(who.id))[6:] + str(ran) + "ubot"
         await bot.send_message(bf, username)
         await asyncio.sleep(1)
         nowdone = (await bot.get_messages(bf, limit=1))[0].text
@@ -106,7 +111,7 @@ async def autobot():
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
             await bot.send_message(
-                bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @NastyProject ✨"
+                bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @ChannelKitaro ✨"
             )
             await bot.send_message(
                 BOTLOG_CHATID,
@@ -148,7 +153,7 @@ async def autobot():
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @NastyProject ✨"
+            bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ChannelKitaro ✨"
         )
         await bot.send_message(
             BOTLOG_CHATID,
@@ -233,6 +238,8 @@ def remove_plugin(shortname):
         raise ValueError
 
 
+# bye Ice-Userbot
+
 async def create_supergroup(group_name, client, botusername, descript):
     try:
         result = await client(
@@ -259,3 +266,50 @@ async def create_supergroup(group_name, client, botusername, descript):
     if not str(created_chat_id).startswith("-100"):
         created_chat_id = int("-100" + str(created_chat_id))
     return result, created_chat_id
+
+
+async def autopilot():
+    if BOTLOG_CHATID and str(BOTLOG_CHATID).startswith("-100"):
+        return
+    k = []  # To Refresh private ids
+    async for x in bot.iter_dialogs():
+        k.append(x.id)
+    if BOTLOG_CHATID:
+        try:
+            await bot.get_entity(int("BOTLOG_CHATID"))
+            return
+        except BaseException:
+            del heroku_var["BOTLOG_CHATID"]
+    try:
+        r = await bot(
+            CreateChannelRequest(
+                title="JM Logs",
+                about="My JM Logs Group\n\n Join @ChannelKitaro",
+                megagroup=True,
+            ),
+        )
+    except ChannelsTooMuchError:
+        LOGS.info(
+            "Terlalu banyak channel dan grup, hapus salah satu dan restart lagi"
+        )
+        exit(1)
+    except BaseException:
+        LOGS.info(
+            "Terjadi kesalahan, Buat sebuah grup lalu isi id nya di config var BOTLOG_CHATID."
+        )
+        exit(1)
+    chat_id = r.chats[0].id
+    if not str(chat_id).startswith("-100"):
+        heroku_var["BOTLOG_CHATID"] = "-100" + str(chat_id)
+    else:
+        heroku_var["BOTLOG_CHATID"] = str(chat_id)
+    rights = ChatAdminRights(
+        add_admins=True,
+        invite_users=True,
+        change_info=True,
+        ban_users=True,
+        delete_messages=True,
+        pin_messages=True,
+        anonymous=False,
+        manage_call=True,
+    )
