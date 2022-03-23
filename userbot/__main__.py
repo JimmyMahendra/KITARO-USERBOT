@@ -10,30 +10,29 @@ from importlib import import_module
 
 import requests
 from telethon.tl.functions.channels import InviteToChannelRequest as Addbot
-
 from userbot import (
     BOTLOG_CHATID,
     BOT_USERNAME,
     BOT_TOKEN,
     BOT_VER,
     LOGS,
-    kyyblacklist,
+    taroblacklist,
     bot,
     call_py,
 )
 from userbot.modules import ALL_MODULES
-from userbot.utils import autobot
+from userbot.utils import autobot, autopilot
 
 try:
     bot.start()
     call_py.start()
     user = bot.get_me()
-    kyyblacklist = requests.get(
-        "https://raw.githubusercontent.com/muhammadrizky16/Kyyblack/master/kyyblacklist.json"
+    taroblacklist = requests.get(
+        "https://raw.githubusercontent.com/Kitaroo/taroblack/master/taroblacklist.json"
     ).json()
-    if user.id in kyyblacklist:
+    if user.id in taroblacklist:
         LOGS.warning(
-            "MAKANYA GA USAH BERTINGKAH GOBLOK, USERBOTnya GUA MATIIN NAJIS BANGET DIPAKE ORANG KEK LU.\nCredits: @IDnyaKosong"
+            "MAKANYA GA USAH BERTINGKAH GOBLOK, USERBOTnya GUA MATIIN NAJIS BANGET DIPAKE ORANG KEK LU.\nCredits: @KitaroHeyy"
         )
         sys.exit(1)
 except Exception as e:
@@ -43,16 +42,22 @@ except Exception as e:
 for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
+if not BOTLOG_CHATID:
+    LOGS.info(
+        "BOTLOG_CHATID Vars tidak terisi, Memulai Membuat Grup Otomatis..."
+    )
+    bot.loop.run_until_complete(autopilot())
+
 LOGS.info(
-    f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/NastySupportt")
+    f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/rumahkitaro3")
 LOGS.info(
-    f"✨Kyy-Userbot✨ ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
+    f"🤡JM-Userbot🤡 ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
 
 
 async def check_alive():
     try:
         if BOTLOG_CHATID != 0:
-            await bot.send_message(BOTLOG_CHATID, "✨ **Kyy Userbot Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - 3.1.0@Kyy-Userbot\n➠ **Ketik** `.ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @NastyProject ")
+            await bot.send_message(BOTLOG_CHATID, "✨ **JM Userbot Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - 3.1.5@JM-Userbot\n➠ **Ketik** `.ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @KitaroChannel ")
     except Exception as e:
         LOGS.info(str(e))
     try:
