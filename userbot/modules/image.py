@@ -3,12 +3,12 @@
 # Ya gitu deh:')
 
 from shutil import rmtree
-from userbot.utils import kyy_cmd
+from userbot.utils import jim_cmd
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 from userbot.utils import googleimagesdownload
 
 
-@kyy_cmd(pattern="img (.*)")
+@jim_cmd(pattern="img (.*)")
 async def goimg(event):
     query = event.pattern_match.group(1)
     if not query:
