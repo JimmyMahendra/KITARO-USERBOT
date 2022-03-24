@@ -112,7 +112,7 @@ DEVS = (
     860951678,  #joo
 )
 
-# Blacklist User for use JM-Userbot
+# Blacklist User for use KITARO-USERBOT
 while 0 < 6:
     _BLACKLIST = get(
         "https://raw.githubusercontent.com/Kitaroo/taroblack/master/taroblacklist.json"
@@ -179,9 +179,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/Kitaroo/JM-Userbot")
+    "https://github.com/Kitaroo/KITARO-USERBOT")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "JM-Userbot")
+    "UPSTREAM_REPO_BRANCH", "KITARO-USERBOT")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -251,8 +251,8 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
-# Untuk Perintah .jmalive
-JIM_TEKS_KUSTOM = os.environ.get("JIM_TEKS_KUSTOM", "I'am Using JM-Userbot✨")
+# Untuk Perintah .taroalive
+JIM_TEKS_KUSTOM = os.environ.get("JIM_TEKS_KUSTOM", "I'am Using KITARO-USERBOT✨")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -275,7 +275,7 @@ BITLY_TOKEN = os.environ.get(
     "BITLY_TOKEN") or "o_1fpd9299vp"
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "JM-Userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "KITARO-USERBOT")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "3.1.5")
@@ -297,7 +297,7 @@ INLINE_PIC = os.environ.get(
 # Default emoji help
 EMOJI_HELP = os.environ.get("EMOJI_HELP") or "🤡"
 
-# °JM-Userbot°
+# °KITARO-USERBOT°
 OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/KitaroHeyy"
 
 DEFAULT = list(map(int, b64decode("QEtpdGFyb0hleXk=").split()))
@@ -413,7 +413,7 @@ for binary, path in binaries.items():
 if STRING_SESSION:
     session = StringSession(str(STRING_SESSION))
 else:
-    session = "JM-Userbot"
+    session = "KITARO-USERBOT"
 try:
     bot = TelegramClient(
         session=session,
@@ -453,7 +453,7 @@ with bot:
 
 async def update_restart_msg(chat_id, msg_id):
     message = (
-        f"**JM-Userbot v{BOT_VER} is back up and running!**\n\n"
+        f"**KITARO-USERBOT v{BOT_VER} is back up and running!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
         f"**User:** {owner}"
@@ -652,25 +652,25 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@JMUserbot"):
+            if event.query.user_id == uid and query.startswith("@KitaroUserbot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=jimlogo,
                     link_preview=False,
-                    text=f"**🤡 ᴊᴍ-ųʂɛɾႦσƚ Inline Menu 🤡**\n\n요 **Owner :** [{user.first_name}](tg://user?id={user.id})\n요 **Jumlah** `{len(dugmeler)}` **Modules**",
+                    text=f"**🤡 кเՇคг๏-ųʂɛɾႦσƚ Inline Menu 🤡**\n\n요 **Owner :** [{user.first_name}](tg://user?id={user.id})\n요 **Jumlah** `{len(dugmeler)}` **Modules**",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository JM - Userbot",
+                    description="Repository KITARO - Userbot",
                     url="https://t.me/rumahkitaro3",
                     thumb=InputWebDocument(
                         ALIVE_LOGO,
                         0,
                         "image/jpeg",
                         []),
-                    text="**JM-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n요 **Owner Repo :** [Jim](https://t.me/KitaroHeyy)\n요 **Support :** @rumahkitaro3\n요 **Repository :** [JM-Userbot](https://github.com/Kitaroo/JM-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**KITARO-USERBOT**\n➖➖➖➖➖➖➖➖➖➖\n요 **Owner Repo :** [Jim](https://t.me/KitaroHeyy)\n요 **Support :** @rumahkitaro3\n요 **Repository :** [KITARO-USERBOT](https://github.com/Kitaroo/KITARO-USERBOT)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -678,7 +678,7 @@ with bot:
                                 "https://t.me/rumahkitaro3"),
                             custom.Button.url(
                                 "Repo",
-                                "https://github.com/Kitaroo/JM-Userbot"),
+                                "https://github.com/Kitaroo/KITARO-USERBOT"),
                         ],
                     ],
                     link_preview=False,
@@ -717,15 +717,15 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="🤡 ᴊᴍ-ųʂɛɾႦσƚ 🤡",
-                    description="JM - Userbot | Telethon",
+                    title="🤡 кเՇคг๏-ųʂɛɾႦσƚ 🤡",
+                    description="KITARO - Userbot | Telethon",
                     url="https://t.me/ChannelKitaro",
                     thumb=InputWebDocument(
                         ALIVE_LOGO,
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**JM-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n요 **Owner :** [{user.first_name}](tg://user?id={user.id})\n요 **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Updates:** @ChannelKitaro\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**KITARO-USERBOT**\n➖➖➖➖➖➖➖➖➖➖\n요 **Owner :** [{user.first_name}](tg://user?id={user.id})\n요 **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Updates:** @ChannelKitaro\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -733,7 +733,7 @@ with bot:
                                 "https://t.me/rumahkitaro3"),
                             custom.Button.url(
                                 "Repo",
-                                "https://github.com/Kitaroo/JM-Userbot"),
+                                "https://github.com/Kitaroo/KITARO-USERBOT"),
                         ],
                     ],
                     link_preview=False,
