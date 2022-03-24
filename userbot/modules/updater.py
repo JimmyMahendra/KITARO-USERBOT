@@ -103,7 +103,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
 
         if BOTLOG:
             await event.client.send_message(
-                BOTLOG_CHATID, "#BOT \n" "`KITARO-USERBOT Berhasil Di Update✅`"
+                BOTLOG_CHATID, "#BOT \n" "`𝙺ιтαяσ-υѕєявσ𝚃 Berhasil Di Update✅`"
             )
 
     else:
@@ -119,9 +119,9 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    x = await edit_or_reply(event, "**🤡кเՇคг๏-ųʂɛɾႦσƚ🤡** `Berhasil Di Update!`")
+    x = await edit_or_reply(event, "**🤡𝙺ιтαяσ-υѕєявσ𝚃🤡** `Berhasil Di Update!`")
     await asyncio.sleep(1)
-    await x.edit("**🤡кเՇคг๏-ųʂɛɾႦσƚ🤡** `Di Restart....`")
+    await x.edit("**🤡𝙺ιтαяσ-υѕєявσ𝚃🤡** `Di Restart....`")
     await asyncio.sleep(1)
     await x.edit("`Mohon Menunggu Beberapa Detik.`")
     await asyncio.sleep(10)
@@ -129,7 +129,7 @@ async def update(event, repo, ups_rem, ac_br):
 
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#BOT \n" "**🤡кเՇคг๏-ųʂɛɾႦσƚ🤡 Telah Di Perbarui.**"
+            BOTLOG_CHATID, "#BOT \n" "**🤡𝙺ιтαяσ-υѕєявσ𝚃🤡 Telah Di Perbarui.**"
         )
         await asyncio.sleep(100)
         await x.delete()
@@ -195,7 +195,7 @@ async def upstream(event):
 
     if changelog == "" and force_update is False:
         await xx.edit(
-            f"\n🤡кเՇคг๏-ųʂɛɾႦσƚ🤡 Sudah Versi Terbaru✅ || Tunggu Update Terbaru\n"
+            f"\n🤡𝙺ιтαяσ-υѕєявσ𝚃🤡 Sudah Versi Terbaru✅ || Tunggu Update Terbaru\n"
         )
         await asyncio.sleep(15)
         await xx.delete()
@@ -203,7 +203,7 @@ async def upstream(event):
 
     if conf is None and force_update is False:
         changelog_str = (
-            f"**Pembaruan Untuk 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡 :\n\n📊 Pembaruan Data :**\n`{changelog}`"
+            f"**Pembaruan Untuk 🤡𝙺ιтαяσ-υѕєявσ𝚃🤡 :\n\n📊 Pembaruan Data :**\n`{changelog}`"
         )
         if len(changelog_str) > 4096:
             await xx.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
@@ -227,13 +227,13 @@ async def upstream(event):
             "`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`"
         )
     else:
-        await xx.edit("` Proses Update 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡, Loading....1%`")
-        await xx.edit("` Proses Update 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡, Loading....20%`")
-        await xx.edit("` Proses Update 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡, Loading....35%`")
-        await xx.edit("` Proses Update 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡, Loading....77%`")
-        await xx.edit("` Proses Update 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡, Updating...90%`")
+        await xx.edit("` Proses Update 🤡𝙺ιтαяσ-υѕєявσ𝚃🤡, Loading....1%`")
+        await xx.edit("` Proses Update 🤡𝙺ιтαяσ-υѕєявσ𝚃🤡, Loading....20%`")
+        await xx.edit("` Proses Update 🤡𝙺ιтαяσ-υѕєявσ𝚃🤡, Loading....35%`")
+        await xx.edit("` Proses Update 🤡𝙺ιтαяσ-υѕєявσ𝚃🤡, Loading....77%`")
+        await xx.edit("` Proses Update 🤡𝙺ιтαяσ-υѕєявσ𝚃🤡, Updating...90%`")
         await xx.edit(
-            "` Proses Update 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡, Mohon Tunggu Sebentar....100%`"
+            "` Proses Update 🤡𝙺ιтαяσ-υѕєявσ𝚃🤡, Mohon Tunggu Sebentar....100%`"
         )
 
     if conf == "now":
