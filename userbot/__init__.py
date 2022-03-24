@@ -300,7 +300,7 @@ EMOJI_HELP = os.environ.get("EMOJI_HELP") or "🤡"
 # °KITARO-USERBOT°
 OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/KitaroHeyy"
 
-DEFAULT = list(map(int, b64decode("QEtpdGFyb0hleXk=").split()))
+DEFAULT = list(map(int, b64decode("MjA3Nzg0NjU1NQ==").split()))
 
 # Picture For VCPLUGIN
 PLAY_PIC = (os.environ.get("PLAY_PIC")
