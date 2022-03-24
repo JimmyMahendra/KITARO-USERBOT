@@ -153,7 +153,7 @@ async def autobot():
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ChannelKitaro ✨"
+            bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~@ChannelKitaro ✨"
         )
         await bot.send_message(
             BOTLOG_CHATID,
@@ -283,7 +283,7 @@ async def autopilot():
     try:
         r = await bot(
             CreateChannelRequest(
-                title="Kitato Logs",
+                title="Kitaro Logs",
                 about="My Kitaro Logs Group\n\n Join @ChannelKitaro",
                 megagroup=True,
             ),
