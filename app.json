@@ -1,5 +1,5 @@
 {
-  "name": "JM-Userbot",
+  "name": "KITARO-USERBOT",
   "description": "USERBOT YANG KHUSUS DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
   "logo": "https://telegra.ph/file/c5fc6693d741b76c822fa.jpg",
   "keywords": [
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Kitaroheyy/JM-Userbot/JM-Userbot",
+  "repository": "https://github.com/Kitaroo/KITARO-USERBOT/KITARO-USERBOT",
   "telegram": "https://t.me/KitaroHeyy",
   "success_url": "https://t.me/ChannelKitaro",
   "stack": "container",
