@@ -87,7 +87,7 @@ async def redis(pong):
     await xx.edit(
         f"**[{user.first_name}](tg://user?id={user.id}) **        \n"
         f"**➾Kecepatan : ** '%sms'  \n"
-        f"**➾Branch : ** 'JM-Userbot` \n" % (duration)
+        f"**➾Branch : ** 'KITARO-USERBOT` \n" % (duration)
     )
 
 
