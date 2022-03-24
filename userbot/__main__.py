@@ -51,13 +51,13 @@ if not BOTLOG_CHATID:
 LOGS.info(
     f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/rumahkitaro3")
 LOGS.info(
-    f"🤡JM-Userbot🤡 ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
+    f"🤡KITARO-USERBOT🤡 ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
 
 
 async def check_alive():
     try:
         if BOTLOG_CHATID != 0:
-            await bot.send_message(BOTLOG_CHATID, "✨ **JM Userbot Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - 3.1.5@JM-Userbot\n➠ **Ketik** `.ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @KitaroChannel ")
+            await bot.send_message(BOTLOG_CHATID, "✨ **KITARO-USERBOT Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - 3.1.5@KITARO-USERBOT\n➠ **Ketik** `.ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @KitaroChannel ")
     except Exception as e:
         LOGS.info(str(e))
     try:
