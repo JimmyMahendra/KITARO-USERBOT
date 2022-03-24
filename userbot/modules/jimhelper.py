@@ -8,7 +8,7 @@ async def usit(e):
     await edit_or_reply(e,
                         f"**Halo {owner} Jika Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `{cmd}help` Atau Bisa Minta Bantuan Ke:\n"
                         "\n[Telegram](t.me/KitaroHeyy)"
-                        "\n[Repo](https://github.com/S/JM-Userbot)"
+                        "\n[Repo](https://github.com/S/KITARO-USERBOT)"
                         "\n[Support](t.me/rumahkitaro3)")
 
 
@@ -16,13 +16,13 @@ async def usit(e):
 async def var(m):
     await edit_or_reply(m,
                         f"**Disini Daftar Vars Dari {owner}:**\n"
-                        "\n[DAFTAR VARS](https://raw.githubusercontent.com/Kitaroo/JM-Userbot/JM-Userbot/varshelper.txt)")
+                        "\n[DAFTAR VARS](https://raw.githubusercontent.com/Kitaroo/KITARO-USERBOT/KITARO-USERBOT/varshelper.txt)")
 
 
 CMD_HELP.update({
     "helper":
     f"`{cmd}lhelp`\
-\nUsage: Bantuan Untuk JM-Userbot.\
+\nUsage: Bantuan Untuk KITARO-USERBOT.\
 \n`{cmd}vars`\
 \nUsage: Melihat Daftar Vars."
 })
