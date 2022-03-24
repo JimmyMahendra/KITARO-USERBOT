@@ -160,8 +160,8 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⚜-**🤡JM-Userbot🤡 Versi:** \n "
-            f"heads/JM-Userbot-0-x634i7u1"
+            "**⚜-**🤡KITARO-USERBOT🤡 Versi:** \n "
+            f"heads/KITARO-USERBOT-0-x634i7u1"
             "\n**⚜-**Revisi:**\n "
             f"{revout}"
         )
@@ -231,7 +231,7 @@ async def redis(alive):
         f"• **Pytgcalls Version :** `{pytgcalls.__version__}` \n"
         f"• **Bot Version :** `{BOT_VER}` \n"
         f"• **Modules :** `{len(modules)}` Modules \n"
-        f"  **[ɢʀᴏᴜᴘꜱ](https://t.me/rumahkitaro3)** | **[ᴄʜᴀɴɴᴇʟ](https://t.me/ChannelKitaro)** | **[ᴏᴡɴᴇʀ](https://t.me/KitaroHeyy)** | **[ɢɪᴛʜᴜʙ](https://github.com/Kitaro/JM-Userbot)**"
+        f"  **[ɢʀᴏᴜᴘꜱ](https://t.me/rumahkitaro3)** | **[ᴄʜᴀɴɴᴇʟ](https://t.me/ChannelKitaro)** | **[ᴏᴡɴᴇʀ](https://t.me/KitaroHeyy)** | **[ɢɪᴛʜᴜʙ](https://github.com/Kitaroo/KITARO-USERBOT)**"
     )
     if ALIVE_LOGO:
         try:
