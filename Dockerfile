@@ -11,6 +11,6 @@ RUN git clone -b KITARO-USERBOT https://github.com/Kitaroo/KITARO-USERBOT /home/
     && chmod 777 /home/KITARO-USERBOT \
     && mkdir /home/KITARO-USERBOT/bin/
 WORKDIR /home/KITARO-USERBOT/
-COPY ./sample_config.env ./config.env* /home/JM-Userbot/
+COPY ./sample_config.env ./config.env* /home/KITARO-USERBOT/
 RUN pip install -r requirements.txt
 CMD ["python3", "-m", "userbot"]
