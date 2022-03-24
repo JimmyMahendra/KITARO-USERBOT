@@ -431,7 +431,7 @@ except Exception as e:
 
 async def checking():
     gocheck = str(pybase64.b64decode("QHJ1bWFoa2l0YXJvMw=="))[2:15]
-    checker = str(pybase64.b64decode("QEtpdGFyb0NoYW5uZWw="))[2:16]
+    checker = str(pybase64.b64decode("QENoYW5uZWxLaXRhcm8="))[2:16]
     try:
         await bot(GetSec(gocheck))
     except BaseException:
@@ -565,7 +565,7 @@ with bot:
                 current_page_number = int(looters)
                 buttons = paginate_help(
                     current_page_number, dugmeler, "helpme")
-                text = f"**🤡 ᴊᴍ-ųʂɛɾႦσƚ Inline Menu 🤡**\n\n요 **Owner** [{user.first_name}](tg://user?id={user.id})\n요 **Jumlah** `{len(dugmeler)}` **Modules**"
+                text = f"**🤡 𝙺ιтαяσ-υѕєявσ𝚃 Inline Menu 🤡**\n\n요 **Owner** [{user.first_name}](tg://user?id={user.id})\n요 **Jumlah** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
                     file=jimlogo,
@@ -657,7 +657,7 @@ with bot:
                 result = builder.photo(
                     file=jimlogo,
                     link_preview=False,
-                    text=f"**🤡 кเՇคг๏-ųʂɛɾႦσƚ Inline Menu 🤡**\n\n요 **Owner :** [{user.first_name}](tg://user?id={user.id})\n요 **Jumlah** `{len(dugmeler)}` **Modules**",
+                    text=f"**🤡 𝙺ιтαяσ-υѕєявσ𝚃 Inline Menu 🤡**\n\n요 **Owner :** [{user.first_name}](tg://user?id={user.id})\n요 **Jumlah** `{len(dugmeler)}` **Modules**",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -717,7 +717,7 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="🤡 кเՇคг๏-ųʂɛɾႦσƚ 🤡",
+                    title="🤡 𝙺ιтαяσ-υѕєявσ𝚃 🤡",
                     description="KITARO - Userbot | Telethon",
                     url="https://t.me/ChannelKitaro",
                     thumb=InputWebDocument(
