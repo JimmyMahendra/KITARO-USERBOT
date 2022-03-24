@@ -22,7 +22,7 @@ absen = [
     "**Hadir bro** 😎",
     "**Hadir kak** 😉",
     "**Hadir bang kitaro** 😁",
-    "**Hadir kak maap telat** 🥺",,
+    "**Hadir kak maap telat** 🥺",
 ]
 
 pacar = [
