@@ -60,7 +60,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if HEROKU_APP_NAME is None:
             await edit_or_reply(event,
                                 "`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `"
-                                " untuk dapat deploy perubahan terbaru dari ✨ҡʏʏ-υѕєявσт✨.`"
+                                " untuk dapat deploy perubahan terbaru dari 🤡кเՇคг๏-ŲʂɛɾႦσƚ🤡.`"
                                 )
             repo.__del__()
             return
@@ -70,7 +70,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 break
         if heroku_app is None:
             await edit_delete(event,
-                              f"{txt}\n`Kredensial Heroku tidak valid untuk deploy JM-Project dyno.`"
+                              f"{txt}\n`Kredensial Heroku tidak valid untuk deploy Kitaro-Project dyno.`"
                               )
             return repo.__del__()
         await edit_or_reply(event,
@@ -98,12 +98,12 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                               )
         else:
             await edit_delete(event,
-                              "`JM-Userbot Berhasil DiUpdate✔️,Restart Harap Tunggu Sebentar`"
+                              "`KITARO-USERBOT Berhasil DiUpdate✔️,Restart Harap Tunggu Sebentar`"
                               )
 
         if BOTLOG:
             await event.client.send_message(
-                BOTLOG_CHATID, "#BOT \n" "`JM-Userbot Berhasil Di Update✅`"
+                BOTLOG_CHATID, "#BOT \n" "`KITARO-USERBOT Berhasil Di Update✅`"
             )
 
     else:
@@ -119,9 +119,9 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    x = await edit_or_reply(event, "**🤡ᴊᴍ-ųʂɛɾႦσƚ🤡** `Berhasil Di Update!`")
+    x = await edit_or_reply(event, "**🤡кเՇคг๏-ųʂɛɾႦσƚ🤡** `Berhasil Di Update!`")
     await asyncio.sleep(1)
-    await x.edit("**🤡ᴊᴍ-ųʂɛɾႦσƚ🤡** `Di Restart....`")
+    await x.edit("**🤡кเՇคг๏-ųʂɛɾႦσƚ🤡** `Di Restart....`")
     await asyncio.sleep(1)
     await x.edit("`Mohon Menunggu Beberapa Detik.`")
     await asyncio.sleep(10)
@@ -129,7 +129,7 @@ async def update(event, repo, ups_rem, ac_br):
 
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#BOT \n" "**🤡ᴊᴍ-ųʂɛɾႦσƚ🤡 Telah Di Perbarui.**"
+            BOTLOG_CHATID, "#BOT \n" "**🤡кเՇคг๏-ųʂɛɾႦσƚ🤡 Telah Di Perbarui.**"
         )
         await asyncio.sleep(100)
         await x.delete()
@@ -195,7 +195,7 @@ async def upstream(event):
 
     if changelog == "" and force_update is False:
         await xx.edit(
-            f"\n🤡ᴊᴍ-ųʂɛɾႦσƚ🤡 Sudah Versi Terbaru✅ || Tunggu Update Terbaru\n"
+            f"\n🤡кเՇคг๏-ųʂɛɾႦσƚ🤡 Sudah Versi Terbaru✅ || Tunggu Update Terbaru\n"
         )
         await asyncio.sleep(15)
         await xx.delete()
@@ -203,7 +203,7 @@ async def upstream(event):
 
     if conf is None and force_update is False:
         changelog_str = (
-            f"**Pembaruan Untuk 🤡ᴊᴍ-ųʂɛɾႦσƚ🤡 :\n\n📊 Pembaruan Data :**\n`{changelog}`"
+            f"**Pembaruan Untuk 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡 :\n\n📊 Pembaruan Data :**\n`{changelog}`"
         )
         if len(changelog_str) > 4096:
             await xx.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
@@ -227,13 +227,13 @@ async def upstream(event):
             "`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`"
         )
     else:
-        await xx.edit("` Proses Update 🤡ᴊᴍ-ųʂɛɾႦσƚ🤡, Loading....1%`")
-        await xx.edit("` Proses Update 🤡ᴊᴍ-ųʂɛɾႦσƚ🤡, Loading....20%`")
-        await xx.edit("` Proses Update 🤡ᴊᴍ-ųʂɛɾႦσƚ🤡, Loading....35%`")
-        await xx.edit("` Proses Update 🤡ᴊᴍ-ųʂɛɾႦσƚ🤡, Loading....77%`")
-        await xx.edit("` Proses Update 🤡ᴊᴍ-ųʂɛɾႦσƚ🤡, Updating...90%`")
+        await xx.edit("` Proses Update 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡, Loading....1%`")
+        await xx.edit("` Proses Update 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡, Loading....20%`")
+        await xx.edit("` Proses Update 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡, Loading....35%`")
+        await xx.edit("` Proses Update 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡, Loading....77%`")
+        await xx.edit("` Proses Update 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡, Updating...90%`")
         await xx.edit(
-            "` Proses Update 🤡ᴊᴍ-ųʂɛɾႦσƚ🤡, Mohon Tunggu Sebentar....100%`"
+            "` Proses Update 🤡кเՇคг๏-ųʂɛɾႦσƚ🤡, Mohon Tunggu Sebentar....100%`"
         )
 
     if conf == "now":
@@ -250,10 +250,10 @@ async def upstream(event):
 CMD_HELP.update(
     {
         "update": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}update`"
-        "\n• : Untuk Melihat Pembaruan Terbaru JM-Userbot."
+        "\n• : Untuk Melihat Pembaruan Terbaru KITARO-USERBOT."
         f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}update now`"
-        "\n• : Memperbarui JM-Userbot."
+        "\n• : Memperbarui KITARO-USERBOT."
         f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}update deploy`"
-        "\n• : Memperbarui JM-Userbot Dengan Cara Men-Deploy Ulang."
+        "\n• : Memperbarui KITARO-USERBOT Dengan Cara Men-Deploy Ulang."
     }
 )
