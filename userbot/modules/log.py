@@ -54,7 +54,7 @@ async def monito_p_m_s(jim):
         return
     if gvarstatus("PMLOG") and gvarstatus("PMLOG") == "false":
         return
-    sender = await iim.get_sender()
+    sender = await jim.get_sender()
     await asyncio.sleep(0.5)
     if not sender.bot:
         chat = await jim.get_chat()
