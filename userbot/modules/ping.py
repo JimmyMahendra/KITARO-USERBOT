@@ -126,7 +126,7 @@ async def redis(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await xping.edit(
-        f"**🤡ᴊᴍ-ųʂɛɾႦσƚ🤡**\n"
+        f"**🤡𝙺ιтαяσ-υѕєявσ𝚃🤡**\n"
         f"➾ __Signal__    __:__ "
         f"`%sms` \n"
         f"➾ __Uptime__ __:__ "
@@ -151,7 +151,7 @@ async def redis(pong):
     duration = (end - start).microseconds / 1000
     user = await pong.client.get_me()
     await sinyal.edit(
-        f"**🤡 ᴊᴍ-ųʂɛɾႦσƚ 🤡**\n\n"
+        f"**🤡 𝙺ιтαяσ-υѕєявσ𝚃 🤡**\n\n"
         f"** ▹  Sɪɢɴᴀʟ   :** "
         f"`%sms` \n"
         f"** ▹  Uᴘᴛɪᴍᴇ  :** "
@@ -204,7 +204,7 @@ async def speedtst(spd):
         f"`{result['ping']}` \n"
         "✧ **ISP:** "
         f"`{result['client']['isp']}` \n"
-        "✧ **BOT:** 🤡ᴊᴍ-ųʂɛɾႦσƚ🤡"
+        "✧ **BOT:** 🤡𝙺ιтαяσ-υѕєявσ𝚃🤡"
     )
 
 
@@ -232,7 +232,7 @@ async def pingme(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 9000
     user = await pong.client.get_me()
-    await pong.edit(f"**✨JimName : [{user.first_name}](tg://user?id={user.id}) **\n📗 `%sms`" % (duration))
+    await pong.edit(f"**✨BotName : [{user.first_name}](tg://user?id={user.id}) **\n📗 `%sms`" % (duration))
 
 
 @jim_cmd(pattern="pink$")
