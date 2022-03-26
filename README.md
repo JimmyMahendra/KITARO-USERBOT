@@ -1,4 +1,4 @@
-<h1 align="center">кเՇคг๏-ųʂɛɾႦσƚ</h1>
+<h1 align="center">𝙺ιтαяσ-υѕєявσ𝚃</h1>
 
 <p align="center">
     <a href="https://github.com/Kitaroo/KITARO-USERBOT/commits/KITARO-USERBOT"><img src="https://img.shields.io/github/last-commit/Kitaroo/KITARO-USERBOT?color=ff0000&logo=github&logoColor=ffffff&style=for-the-badge" /></a>
@@ -9,7 +9,7 @@
 
 
 <p align="center">
-  <img src="https://telegra.ph/file/c5fc6693d741b76c822fa.jpg">
+  <img src="https://telegra.ph/file/40d30f8b4b34e27a03e58.jpg">
 </p>
 
 
