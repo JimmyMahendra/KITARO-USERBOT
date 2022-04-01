@@ -7,6 +7,7 @@ from telethon.tl.functions.phone import CreateGroupCallRequest as startvc
 from telethon.tl.functions.phone import DiscardGroupCallRequest as stopvc
 from telethon.tl.functions.phone import GetGroupCallRequest as getvc
 from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
+from telethon.tl.functions.phone import EditGroupCallTitleRequest as settitle
 
 from telethon.tl import types
 from telethon.utils import get_display_name
@@ -16,7 +17,7 @@ from userbot import CMD_HELP, CMD_HANDLER as cmd
 from userbot.utils import edit_delete, edit_or_reply, jim_cmd
 from userbot.events import register
 
-NO_ADMIN = "`Maaf Anda Bukan Admin 👮`"
+NO_ADMIN = "`Maaf Kamu Bukan Admin 👮`"
 
 
 def vcmention(user):
@@ -28,7 +29,7 @@ def vcmention(user):
 
 async def get_call(jim):
     jim = await jim.client(getchat(jim.chat_id))
-    await jim.client(getvc(jim.full_chat.call, limit=1))
+    hehe = await jim.client(getvc(jim.full_chat.call, limit=1))
     return hehe.call
 
 
@@ -99,7 +100,7 @@ async def change_title(e):
     creator = chat.creator
 
     if not title:
-        return await edit_delete(e, "**Silahkan Masukan Judul Obrolan Suara Grup**")
+        return await edit_delete(e, "**Silahkan Masukan Title Obrolan Suara Grup**")
 
     if not admin and not creator:
         await edit_delete(e, f"**Maaf {me.first_name} Bukan Admin 👮**")
