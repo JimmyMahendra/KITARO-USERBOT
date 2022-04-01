@@ -15,11 +15,13 @@ from userbot import (
     BOT_USERNAME,
     BOT_TOKEN,
     BOT_VER,
+    ALIVE_LOGO,
     LOGS,
     taroblacklist,
     bot,
     call_py,
 )
+from userbot import CMD_HANDLER as cmd
 from userbot.modules import ALL_MODULES
 from userbot.utils import autobot, autopilot
 
@@ -57,7 +59,7 @@ LOGS.info(
 async def check_alive():
     try:
         if BOTLOG_CHATID != 0:
-            await bot.send_message(BOTLOG_CHATID, "✨ **KITARO-USERBOT Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - 3.1.5@KITARO-USERBOT\n➠ **Ketik** `.ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @KitaroChannel ")
+            await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"🤡**KITARO-USERBOT Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - `3.1.5@KITARO-USERBOT`\n➠ **Ketik** `{cmd}ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @ChannelKitaro ")
     except Exception as e:
         LOGS.info(str(e))
     try:
