@@ -154,7 +154,7 @@ PMPERMIT_TEXT = os.environ.get("PMPERMIT_TEXT", None)
 
 # Custom Pmpermit pic
 PMPERMIT_PIC = os.environ.get(
-    "PMPERMIT_PIC") or "https://telegra.ph/file/276d22aac9f400898cd27.jpg"
+    "PMPERMIT_PIC") or "https://telegra.ph/file/40d30f8b4b34e27a03e58.jpg"
 
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
@@ -252,13 +252,13 @@ YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
 # Untuk Perintah .taroalive
-JIM_TEKS_KUSTOM = os.environ.get("JIM_TEKS_KUSTOM", "I'am Using KITARO-USERBOT✨")
+TARO_TEKS_KUSTOM = os.environ.get("TARO_TEKS_KUSTOM", "I'am Using Kitaro-Userbot✨")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
 
 # Default .alive Name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "Jim")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "Kitaro")
 
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", "ID"))
@@ -296,9 +296,6 @@ INLINE_PIC = os.environ.get(
 
 # Default emoji help
 EMOJI_HELP = os.environ.get("EMOJI_HELP") or "🤡"
-
-# °KITARO-USERBOT°
-OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/KitaroHeyy"
 
 DEFAULT = list(map(int, b64decode("MjA3Nzg0NjU1NQ==").split()))
 
@@ -521,11 +518,13 @@ def paginate_help(page_number, loaded_modules, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "««", data="{}_prev({})".format(prefix, modulo_page)
+                    "⪻", data="{}_prev({})".format(prefix, modulo_page)
                 ),
-                custom.Button.inline("Tutup", b"close"),
                 custom.Button.inline(
-                    "»»", data="{}_next({})".format(prefix, modulo_page)
+                    "Kembali", data="{}_close({})".format(prefix, modulo_page)
+                ),
+                custom.Button.inline(
+                    "⪼", data="{}_next({})".format(prefix, modulo_page)
                 ),
             )
         ]
@@ -552,29 +551,26 @@ with bot:
         user = bot.get_me()
         uid = user.id
         owner = user.first_name
+        asst = tgbot.get_me()
+        botusername = asst.username
         logo = ALIVE_LOGO
-        jimlogo = ALIVE_LOGO
+        tarologo = ALIVE_LOGO
+        cmd = CMD_HANDLER
         tgbotusername = BOT_USERNAME
         BTN_URL_REGEX = re.compile(
             r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)"
         )
 
-        @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(rb"reopen")))
-        async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
-                current_page_number = int(looters)
-                buttons = paginate_help(
-                    current_page_number, dugmeler, "helpme")
-                text = f"**🤡 𝙺ιтαяσ-υѕєявσ𝚃 Inline Menu 🤡**\n\n요 **Owner** [{user.first_name}](tg://user?id={user.id})\n요 **Jumlah** `{len(dugmeler)}` **Modules**"
-                await event.edit(
-                    text,
-                    file=jimlogo,
-                    buttons=buttons,
-                    link_preview=False,
-                )
-            else:
-                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
-                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        main_help_button = [
+            [
+                Button.inline("Modules", data="reopen"),
+                Button.inline("VC Plugin", data="taro_inline"),
+            ],
+            [
+                Button.url("Setting", f"t.me/{botusername}"),
+            ],
+            [Button.inline("Tutup", data="close")],
+        ]
 
         @tgbot.on(events.NewMessage(incoming=True,
                   func=lambda e: e.is_private))
@@ -647,6 +643,46 @@ with bot:
                                 f"**ERROR:** Saat menyimpan detail pesan di database\n`{e}`",
                             )
 
+        @tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile(rb"get_back")
+            )
+        )
+        async def on_plug_in_callback_query_handler(event):
+            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
+                current_page_number = int(looters)
+                buttons = paginate_help(
+                    current_page_number, dugmeler, "helpme")
+                text = f"**🤡 𝙺ιтαяσ-υѕєявσ𝚃 Inline Menu 🤡**\n\n요 **Owner** [{user.first_name}](tg://user?id={user.id})\n요 **Jumlah** `{len(dugmeler)}` **Modules**"
+                await event.edit(
+                    text,
+                    file=tarologo,
+                    buttons=buttons,
+                    link_preview=False,
+                )
+            else:
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {ALIVE_NAME}"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
+        @tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile(rb"reopen")
+            )
+        )
+        async def on_plug_in_callback_query_handler(event):
+            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
+                buttons = paginate_help(0, dugmeler, "helpme")
+                text = f"**🤡 𝙺ιтαяσ-υѕєявσ𝚃 Inline Menu 🤡**\n\n요 **Owner** [{user.first_name}](tg://user?id={user.id})\n✣요 **Jumlah** `{len(dugmeler)}` **Modules**"
+                await event.edit(
+                    text,
+                    file=tarologo,
+                    buttons=buttons,
+                    link_preview=False,
+                )
+            else:
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
         @tgbot.on(events.InlineQuery)
         async def inline_handler(event):
             builder = event.builder
@@ -654,27 +690,27 @@ with bot:
             query = event.text
             if event.query.user_id == uid and query.startswith("@KitaroUserbot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
-                result = builder.photo(
-                    file=jimlogo,
+                result = await event.builder.photo(
+                    file=tarologo,
                     link_preview=False,
                     text=f"**🤡 𝙺ιтαяσ-υѕєявσ𝚃 Inline Menu 🤡**\n\n요 **Owner :** [{user.first_name}](tg://user?id={user.id})\n요 **Jumlah** `{len(dugmeler)}` **Modules**",
-                    buttons=buttons,
+                    buttons=main_help_button,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository KITARO - Userbot",
+                    description="Repository KITARO - USERBOT",
                     url="https://t.me/rumahkitaro3",
                     thumb=InputWebDocument(
                         ALIVE_LOGO,
                         0,
                         "image/jpeg",
                         []),
-                    text="**KITARO-USERBOT**\n➖➖➖➖➖➖➖➖➖➖\n요 **Owner Repo :** [Jim](https://t.me/KitaroHeyy)\n요 **Support :** @rumahkitaro3\n요 **Repository :** [KITARO-USERBOT](https://github.com/Kitaroo/KITARO-USERBOT)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**𝙺ιтαяσ-υѕєявσ𝚃**\n➖➖➖➖➖➖➖➖➖➖\n요 **Owner Repo :** [Jim](https://t.me/KitaroHeyy)\n요 **Support :** @rumahkitaro23\n요 **Repository :** [KITARO-USERBOT](https://github.com/Kitaroo/KITARO-USERBOT)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Group",
+                                "Grup",
                                 "https://t.me/rumahkitaro3"),
                             custom.Button.url(
                                 "Repo",
@@ -718,18 +754,18 @@ with bot:
             else:
                 result = builder.article(
                     title="🤡 𝙺ιтαяσ-υѕєявσ𝚃 🤡",
-                    description="KITARO - Userbot | Telethon",
+                    description="KITARO - USERBOT | Telethon",
                     url="https://t.me/ChannelKitaro",
                     thumb=InputWebDocument(
                         ALIVE_LOGO,
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**KITARO-USERBOT**\n➖➖➖➖➖➖➖➖➖➖\n요 **Owner :** [{user.first_name}](tg://user?id={user.id})\n요 **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Updates:** @ChannelKitaro\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**𝙺ιтαяσ-υѕєявσ𝚃**\n➖➖➖➖➖➖➖➖➖➖\n요 **Owner :** [{user.first_name}](tg://user?id={user.id})\n요 **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Updates:** @ChannelKitaroo\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Group",
+                                "Grup",
                                 "https://t.me/rumahkitaro3"),
                             custom.Button.url(
                                 "Repo",
@@ -760,17 +796,76 @@ with bot:
                 )
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-        @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
+        @tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile(rb"helpme_close\((.+?)\)")
+            )
+        )
         async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid or event.query.user_id in DEVS and SUDO_USERS:
-                openlagi = custom.Button.inline(
-                    "• Re-Open Menu •", data="reopen")
+            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @Kitaro-Userbot
+                # https://t.me/TelethonChat/115200
                 await event.edit(
-                    "⚜️ **ʜᴇʟᴘ ᴍᴏᴅᴇ ʙᴜᴛᴛᴏɴ ᴅɪᴛᴜᴛᴜᴘ!** ⚜️", buttons=openlagi
-                )
+                    file=tarologo,
+                    link_preview=True,
+                    buttons=main_help_button)
+
+        @tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile(rb"gcback")
+            )
+        )
+        async def gback_handler(event):
+            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @Kitaro-Userbot
+                # https://t.me/TelethonChat/115200
+                text = (
+                    f"**🤡 𝙺ιтαяσ-υѕєявσ𝚃 Inline Menu 🤡**\n\n요 **Owner :** [{user.first_name}](tg://user?id={user.id})\n요 **Jumlah** `{len(dugmeler)}` **Modules**")
+                await event.edit(
+                    text,
+                    file=tarologo,
+                    link_preview=True,
+                    buttons=main_help_button)
+
+        @tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile(rb"taro_inline")
+            )
+        )
+        async def on_plug_in_callback_query_handler(event):
+            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
+                text = (
+                    f"""
+  •  Syntax : {cmd}play <Judul Lagu/Link YT>
+  •  Function : Untuk Memutar Lagu di voice chat group dengan akun kamu
+  •  Syntax : {cmd}vplay <Judul Video/Link YT>
+  •  Function : Untuk Memutar Video di voice chat group dengan akun kamu
+  •  Syntax : {cmd}end
+  •  Function : Untuk Memberhentikan video/lagu yang sedang putar di voice chat group
+  •  Syntax : {cmd}skip
+  •  Function : Untuk Melewati video/lagu yang sedang di putar
+  •  Syntax : {cmd}pause
+  •  Function : Untuk memberhentikan video/lagu yang sedang diputar
+  •  Syntax : {cmd}resume
+  •  Function : Untuk melanjutkan pemutaran video/lagu yang sedang diputar
+  •  Syntax : {cmd}volume 1-200
+  •  Function : Untuk mengubah volume (Membutuhkan Hak admin)
+  •  Syntax : {cmd}playlist
+  •  Function : Untuk menampilkan daftar putar Lagu/Video
+""")
+                await event.edit(
+                    text,
+                    file=tarologo,
+                    link_preview=True,
+                    buttons=[Button.inline("Kembali", data="gcback")])
             else:
-                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
+        @tgbot.on(events.CallbackQuery(data=b"close"))
+        async def close(event):
+            buttons = [
+                (custom.Button.inline("Buka Menu", data="gcback"),),
+            ]
+            await event.edit("**Menu Ditutup!**", file=tarologo, buttons=buttons)
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(
@@ -794,11 +889,11 @@ with bot:
                 modul_name = event.data_match.group(1).decode("UTF-8")
 
                 cmdhel = str(CMD_HELP[modul_name])
-                if len(cmdhel) > 150:
+                if len(cmdhel) > 950:
                     help_string = (
                         str(CMD_HELP[modul_name])
                         .replace("`", "")
-                        .replace("**", "")[:150]
+                        .replace("**", "")[:950]
                         + "..."
                         + "\n\nBaca Teks Berikutnya Ketik .help "
                         + modul_name
@@ -815,9 +910,13 @@ with bot:
                         modul_name
                     )
                 )
+                await event.edit(
+                    reply_pop_up_alert, buttons=[Button.inline("ᴋᴇᴍʙᴀʟɪ", data="get_back")]
+                )
+
             else:
                 reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
-            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     except BaseException:
         LOGS.info(
