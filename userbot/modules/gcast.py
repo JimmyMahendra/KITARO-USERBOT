@@ -26,6 +26,7 @@ GCAST_BLACKLIST = [
     -1001489233533,  # RumahKitaro
     -1001318051930,  # Gatau GC mana
     -1001626554919,  # EmikoSupport
+    -1001538752127,  # AbingSupport
 
 ]
 
