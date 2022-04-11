@@ -448,7 +448,7 @@ with bot:
         bot.loop.run_until_complete(checking())
     except BaseException:
         LOGS.info(
-            "Join Support Group @rumahkitaro3 and Channel @ChannelKitaro to see the updates of userbot"
+            "Join Support Group @rumahkitaro3 and Channel @ChannelKitaro to see the updates of userbot and Channel @WhoAmIheh to see quotes"
             "Don't Leave")
         quit(1)
 
