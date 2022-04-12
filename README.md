@@ -48,6 +48,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 ##
 
 🔰 **THANKS YOU TO**
+*   [Jim](https://github.com/Kitaroo/KITARO-USERBOT)    Kitaro-Userbot
 *   [Kyy](https://github.com/muhammadrizky16/Kyy-Userbot)   Kyy - Userbot
 *   [Alfa](https://github.com/CoeF) Alfa
 *   [Risman](https://github.com/mrismanaziz/Man-Userbot)   Suhu - Userbot
