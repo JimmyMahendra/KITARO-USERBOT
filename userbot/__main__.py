@@ -41,7 +41,7 @@ if not BOT_TOKEN:
     )
     bot.loop.run_until_complete(autobot())
 LOGS.info(
-    f"Jika Anda Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/NastySupportt")
+    f"Jika Anda Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/RumahKitaro3")
 LOGS.info(
     f"🤡KITARO-USERBOT🤡 ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
 idle()
