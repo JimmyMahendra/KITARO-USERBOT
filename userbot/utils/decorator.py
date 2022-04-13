@@ -66,7 +66,7 @@ def jim_cmd(
                 cmd2 = sudo_ + command
             else:
                 cmd1 = (
-                    (k_ +
+                    (taro_ +
                      pattern).replace(
                         "$",
                         "").replace(
