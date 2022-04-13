@@ -13,6 +13,10 @@ from userbot import (
     BL_CHAT,
     CMD_HANDLER,
     CMD_LIST,
+    TARO2,
+    TARO3,
+    TARO4,
+    TARO5,
     LOAD_PLUG,
     SUDO_HANDLER,
     SUDO_USERS,
@@ -51,18 +55,18 @@ def jim_cmd(
             or not pattern.startswith(r"\#")
             and pattern.startswith(r"^")
         ):
-            jim_reg = sudo_reg = re.compile(pattern)
+            taro_reg = sudo_reg = re.compile(pattern)
         else:
-            jim_ = "\\" + CMD_HANDLER
+            taro_ = "\\" + CMD_HANDLER
             sudo_ = "\\" + SUDO_HANDLER
-            jim_reg = re.compile(jim_ + pattern)
+            taro_reg = re.compile(taro_ + pattern)
             sudo_reg = re.compile(sudo_ + pattern)
             if command is not None:
-                cmd1 = jim_ + command
+                cmd1 = taro_ + command
                 cmd2 = sudo_ + command
             else:
                 cmd1 = (
-                    (jim_ +
+                    (k_ +
                      pattern).replace(
                         "$",
                         "").replace(
@@ -82,26 +86,61 @@ def jim_cmd(
                 CMD_LIST.update({file_test: [cmd1]})
 
     def decorator(func):
-        if not disable_edited:
-            bot.add_event_handler(
-                func, events.MessageEdited(
-                    **args, outgoing=True, pattern=jim_reg))
-        bot.add_event_handler(
-            func, events.NewMessage(**args, outgoing=True, pattern=jim_reg)
-        )
-        if allow_sudo:
+        if bot:
             if not disable_edited:
                 bot.add_event_handler(
+                    func, events.MessageEdited(
+                        **args, outgoing=True, pattern=taro_reg))
+            bot.add_event_handler(
+                func, events.NewMessage(**args, outgoing=True, pattern=taro_reg)
+            )
+        if bot:
+            if allow_sudo:
+                if not disable_edited:
+                    bot.add_event_handler(
+                        func,
+                        events.MessageEdited(
+                            **args,
+                            from_users=list(SUDO_USERS),
+                            pattern=sudo_reg),
+                    )
+                bot.add_event_handler(
                     func,
-                    events.MessageEdited(
+                    events.NewMessage(
                         **args, from_users=list(SUDO_USERS), pattern=sudo_reg
                     ),
                 )
-            bot.add_event_handler(
-                func,
-                events.NewMessage(
-                    **args, from_users=list(SUDO_USERS), pattern=sudo_reg
-                ),
+        if TARO2:
+            if not disable_edited:
+                TARO2.add_event_handler(
+                    func, events.MessageEdited(
+                        **args, outgoing=True, pattern=taro_reg))
+            TARO2.add_event_handler(
+                func, events.NewMessage(**args, outgoing=True, pattern=taro_reg)
+            )
+        if TARO3:
+            if not disable_edited:
+                TARO3.add_event_handler(
+                    func, events.MessageEdited(
+                        **args, outgoing=True, pattern=taro_reg))
+            TARO3.add_event_handler(
+                func, events.NewMessage(**args, outgoing=True, pattern=taro_reg)
+            )
+        if TARO4:
+            if not disable_edited:
+                TARO4.add_event_handler(
+                    func, events.MessageEdited(
+                        **args, outgoing=True, pattern=taro_reg))
+            TARO4.add_event_handler(
+                func, events.NewMessage(**args, outgoing=True, pattern=taro_reg)
+            )
+        if TARO5:
+            if not disable_edited:
+                TARO5.add_event_handler(
+                    func, events.MessageEdited(
+                        **args, outgoing=True, pattern=taro_reg))
+            TARO5.add_event_handler(
+                func, events.NewMessage(**args, outgoing=True, pattern=taro_reg)
             )
         try:
             LOAD_PLUG[file_test].append(func)
@@ -116,7 +155,16 @@ def jim_handler(
     **args,
 ):
     def decorator(func):
-        bot.add_event_handler(func, events.NewMessage(**args, incoming=True))
+        if bot:
+            bot.add_event_handler(func, events.NewMessage(**args))
+        if TARO2:
+            TARO2.add_event_handler(func, events.NewMessage(**args))
+        if TARO3:
+            TARO3.add_event_handler(func, events.NewMessage(**args))
+        if TARO4:
+            TARO4.add_event_handler(func, events.NewMessage(**args))
+        if TARO5:
+            TARO5.add_event_handler(func, events.NewMessage(**args))
         return func
 
     return decorator
@@ -132,6 +180,23 @@ def asst_cmd(**args):
     def decorator(func):
         if tgbot:
             tgbot.add_event_handler(func, events.NewMessage(**args))
+        return func
+
+    return decorator
+
+
+def chataction(**args):
+    def decorator(func):
+        if bot:
+            bot.add_event_handler(func, events.ChatAction(**args))
+        if TARO2:
+            TARO2.add_event_handler(func, events.ChatAction(**args))
+        if TARO3:
+            TARO3.add_event_handler(func, events.ChatAction(**args))
+        if TARO4:
+            TARO4.add_event_handler(func, events.ChatAction(**args))
+        if TARO5:
+            TARO5.add_event_handler(func, events.ChatAction(**args))
         return func
 
     return decorator
