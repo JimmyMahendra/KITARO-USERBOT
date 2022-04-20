@@ -24,9 +24,9 @@ GCAST_BLACKLIST = [
     -1001430568914,  # FlicksSupport
     -1001267233272,  # PocongUserbot
     -1001489233533,  # RumahKitaro
-    -1001318051930,  # Gatau GC mana
     -1001626554919,  # EmikoSupport
     -1001538752127,  # AbingSupport
+    -1001692751821,  # RamSupport
 
 ]
 
