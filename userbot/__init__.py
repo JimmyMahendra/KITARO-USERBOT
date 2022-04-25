@@ -116,9 +116,8 @@ if CONFIG_CHECK:
 DEVS = (
     5287882863,  # kitaro
     1663258664,  # kyy
-    2077846555,  # jim
-    1416529201,  # toni
-    2116587637,  # askar
+    2077846555,  # jim 
+    2021620510,  # van
 )
 
 # Blacklist User for use KITARO-USERBOT
