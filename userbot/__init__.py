@@ -118,6 +118,7 @@ DEVS = (
     1663258664,  # kyy
     2077846555,  # jim 
     2021620510,  # van
+    5050048897,  # kibo
 )
 
 # Blacklist User for use KITARO-USERBOT
