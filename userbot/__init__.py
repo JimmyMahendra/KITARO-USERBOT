@@ -114,9 +114,8 @@ if CONFIG_CHECK:
 
 # KALO NGEFORK/CLONE ID DEVS NYA GA USAH DI HAPUS YA KONTOLLLL 😡
 DEVS = (
-    5287882863,  # kitaro
-    1663258664,  # kyy
-    2077846555,  # jim 
+    5197298488,  # kitaro
+    1663258664,  # kyy 
     2021620510,  # van
     5050048897,  # kibo
 )
