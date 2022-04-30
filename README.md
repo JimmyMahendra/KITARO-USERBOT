@@ -1,4 +1,4 @@
-<h1 align="center">Clown-Userbot</h1>
+<h1 align="center">𝙺ιтαяσ-υѕєявσ𝚃</h1>
 
 <p align="center">
     <a href="https://github.com/Kitaroo/KITARO-USERBOT/commits/KITARO-USERBOT"><img src="https://img.shields.io/github/last-commit/Kitaroo/KITARO-USERBOT?color=ff0000&logo=github&logoColor=ffffff&style=for-the-badge" /></a>
