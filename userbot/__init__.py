@@ -120,7 +120,7 @@ DEVS = (
     5050048897,  # kibo
 )
 
-# Blacklist User for use Clown-Userbot
+# Blacklist User for use KITARO-USERBOT
 while 0 < 6:
     _BLACKLIST = get(
         "https://raw.githubusercontent.com/Kitaroo/taroblack/master/taroblacklist.json"
@@ -192,9 +192,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/Kitaroo/Clown-Userbot")
+    "https://github.com/JimmyMahendra/KITARO-USERBOT")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Clown-Userbot")
+    "UPSTREAM_REPO_BRANCH", "KITARO-USERBOT")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -265,13 +265,13 @@ YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
 # Untuk Perintah .taroalive
-TARO_TEKS_KUSTOM = os.environ.get("TARO_TEKS_KUSTOM", "I'am Using Clown-Userbot🤡")
+TARO_TEKS_KUSTOM = os.environ.get("TARO_TEKS_KUSTOM", "I'am Using KITARO-USERBOT🤡")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
 
 # Default .alive Name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "Clown")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "Kitaro")
 
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", "ID"))
@@ -288,7 +288,7 @@ BITLY_TOKEN = os.environ.get(
     "BITLY_TOKEN") or "o_1fpd9299vp"
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Clown-Userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "KITARO-USERBOT")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "3.1.6")
@@ -423,7 +423,7 @@ for binary, path in binaries.items():
 if STRING_SESSION:
     session = StringSession(str(STRING_SESSION))
 else:
-    session = "Clown-Userbot"
+    session = "KITARO-USERBOT"
 try:
     bot = TelegramClient(
         session=session,
@@ -504,7 +504,7 @@ else:
 
 async def update_restart_msg(chat_id, msg_id):
     message = (
-        f"**Clown-Userbot v{BOT_VER} is back up and running!**\n\n"
+        f"**KITARO-USERBOT v{BOT_VER} is back up and running!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
         f"**User:** {owner}"
@@ -725,7 +725,7 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@ClownUserbot"):
+            if event.query.user_id == uid and query.startswith("@KitaroUserbot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = await event.builder.photo(
                     file=tarologo,
@@ -748,14 +748,14 @@ with bot:
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository Clown - Userbot",
+                    description="Repository KITARO - USERBOT",
                     url="https://t.me/rumahkitaro3",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text="**𝙺ιтαяσ-υѕєявσ𝚃**\n➖➖➖➖➖➖➖➖➖➖\n요 **Owner Repo :** [Jim](https://t.me/IamKitaro)\n요 **Support :** @rumahkitaro3\n요 **Repository :** [Clown-Userbot](https://github.com/Kitaroo/Clown-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**𝙺ιтαяσ-υѕєявσ𝚃**\n➖➖➖➖➖➖➖➖➖➖\n요 **Owner Repo :** [Jim](https://t.me/IamKitaro)\n요 **Support :** @rumahkitaro3\n요 **Repository :** [KITARO-USERBOT](https://github.com/JimmyMahendra/KITARO-USERBOT)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -763,7 +763,7 @@ with bot:
                                 "https://t.me/rumahkitaro3"),
                             custom.Button.url(
                                 "Repo",
-                                "https://github.com/Kitaroo/Clown-Userbot"),
+                                "https://github.com/JimmyMahendra/KITARO-USERBOT"),
                         ],
                     ],
                     link_preview=False,
@@ -803,7 +803,7 @@ with bot:
             else:
                 result = builder.article(
                     title="🤡 𝙺ιтαяσ-υѕєявσ𝚃 🤡",
-                    description="Clown - Userbot | Telethon",
+                    description="KITARO - USERBOT | Telethon",
                     url="https://t.me/ChannelKitaro",
                     thumb=InputWebDocument(
                         INLINE_PIC,
@@ -818,7 +818,7 @@ with bot:
                                 "https://t.me/rumahkitaro3"),
                             custom.Button.url(
                                 "Repo",
-                                "https://github.com/Kitaroo/Clown-Userbot"),
+                                "https://github.com/JimmyMahendra/KITARO-USERBOT"),
                         ],
                     ],
                     link_preview=False,
