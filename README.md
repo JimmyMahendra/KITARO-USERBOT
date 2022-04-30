@@ -1,4 +1,4 @@
-<h1 align="center">𝙺ιтαяσ-υѕєявσ𝚃</h1>
+<h1 align="center">Clown-Userbot</h1>
 
 <p align="center">
     <a href="https://github.com/Kitaroo/Clown-Userbot/commits/Clown-Userbot"><img src="https://img.shields.io/github/last-commit/Kitaroo/Clown-Usrrbot?color=ff0000&logo=github&logoColor=ffffff&style=for-the-badge" /></a>
@@ -32,7 +32,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 
 <p align="center">
 <a href="https://dashboard.heroku.com/new?template=https://github.com/Kitaroo/template-userbot"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="215""/</a>  
-<a href="https://telegram.dog/XTZ_HerokuBot?start=S2l0YXJvby9KTS1Vc2VyYm90IEpNLVVzZXJib3Q"><img src="https://img.shields.io/badge/Deploy%20Via%20Telegram-blue?style=for-the-badge&logo=telegram" width="215""/</a>  </p>
+<a href="https://telegram.dog/XTZ_HerokuBot?start=S2l0YXJvby9DbG93bi1Vc2VyYm90IENsb3duLVVzZXJib3Q"><img src="https://img.shields.io/badge/Deploy%20Via%20Telegram-blue?style=for-the-badge&logo=telegram" width="215""/</a>  </p>
 
 
 ### sᴜᴘᴘᴏʀᴛ & ᴜᴘᴅᴀᴛᴇs :
