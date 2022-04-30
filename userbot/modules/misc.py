@@ -17,7 +17,7 @@ from PIL import Image
 
 
 REPOLINK = str(
-    UPSTREAM_REPO_URL) if UPSTREAM_REPO_URL else "https://github.com/Kitaroo/KITARO-USERBOT"
+    UPSTREAM_REPO_URL) if UPSTREAM_REPO_URL else "https://github.com/Kitaroo/Clown-Userbot"
 # ============================================
 
 opener = urllib.request.build_opener()
@@ -57,7 +57,7 @@ async def sleepybot(time):
 @jim_cmd(pattern="shutdown$")
 async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
-    await edit_or_reply(event, "`Mematikan KITARO-USERBOT....`")
+    await edit_or_reply(event, "`Mematikan Clown-Userbot....`")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
@@ -68,7 +68,7 @@ async def killdabot(event):
 
 @jim_cmd(pattern="restart$")
 async def killdabot(event):
-    await edit_or_reply(event, "`Restarting KITARO-USERBOT...`")
+    await edit_or_reply(event, "`Restarting Clown-Userbot...`")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
@@ -83,7 +83,7 @@ async def killdabot(event):
 async def reedme(e):
     await edit_or_reply(e,
                         "Here's Something for You to Read :\n"
-                        "\n[☣️ KITARO-USERBOT Repo](https://github.com/Kitaroo/KITARO-USERBOT/blob/KITARO-USERBOT/README.md)"
+                        "\n[☣️ Clown-Userbot Repo](https://github.com/Kitaroo/Clown-Userbot/blob/Clown-Userbot/README.md)"
                         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
                         "\n[Special - Note](https://telegra.ph/Special-Note-11-02)")
 
@@ -106,10 +106,10 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await edit_or_reply(wannasee,                       
-                        "**Hey**, I am using **✨ᴊᴍ-ųʂɛɾႦσƚ✨** \n"
+                        "**Hey**, I am using **✨Clown-Userbot✨** \n"
                         "┏━━━━━━━°⌜ 喜多郎 ⌟°━━━━━━┓\n"
-                        "│ **Repo Userbot :** [ɢɪᴛʜᴜʙ](https://github.com/kitaroo/KITARO-USERBOT)\n"
-                        "│ **Owner Bot     :** [ᴋɪᴛᴀʀᴏ](t.me/Kitaroheyy)\n"
+                        "│ **Repo Userbot :** [ɢɪᴛʜᴜʙ](https://github.com/kitaroo/Clown-Userbot)\n"
+                        "│ **Owner Bot     :** [ᴋɪᴛᴀʀᴏ](t.me/IamKitaro)\n"
                         "│ **Channel        :** [ᴄʜᴀɴɴᴇʟ​](https://t.me/ChannelKitaro)\n"
                         "│ **Support         :** [ɢʀᴜᴘ](https://t.me/rumahkitaro3)\n"
                         "┗━━━━━━━°⌜ ジミー ⌟°━━━━━━┛\n"
@@ -272,13 +272,13 @@ CMD_HELP.update({
     \n↳ : Dapatkan item acak dari daftar item.",
     "sleep": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}sleep <seconds>`\
     \n↳ : `{cmd}sleep`\
-    \n  •  **Function : Biarkan KITARO-USERBOT tidur selama beberapa detik.",
+    \n  •  **Function : Biarkan Clown-Userbot tidur selama beberapa detik.",
     "shutdown": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}shutdown`\
     \n↳ : Mematikan bot",
     "repo": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}repo`\
-    \n↳ : Menampilan link Repository KITARO-USERBOT.",
+    \n↳ : Menampilan link Repository Clown-Userbot.",
     "string": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}string`\
-    \n↳: Menampilkan link String KITARO-USERBOT",
+    \n↳: Menampilkan link String Clown-Userbot",
     "readme": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙 `{cmd}readme`\
     \n↳ : Menyediakan tautan untuk mengatur userbot dan modulnya.",
     "repeat": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}repeat <no> <text>`\
