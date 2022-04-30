@@ -1,7 +1,7 @@
 {
-  "name": "KITARO-USERBOT",
+  "name": "Clown-Userbot",
   "description": "USERBOT YANG KHUSUS DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
-  "logo": "https://telegra.ph/file/40d30f8b4b34e27a03e58.jpg",
+  "logo": "https://telegra.ph/file/f9578dcc378b3309caeb6.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,8 +9,8 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Kitaroo/KITARO-USERBOT/KITARO-USERBOT",
-  "telegram": "https://t.me/KitaroHeyy",
+  "repository": "https://github.com/Kitaroo/Clown-Userbot/Clown-Userbot",
+  "telegram": "https://t.me/IamKitaro",
   "success_url": "https://t.me/ChannelKitaro",
   "stack": "container",
   "env": {
