@@ -1,8 +1,8 @@
 <h1 align="center">Clown-Userbot</h1>
 
 <p align="center">
-    <a href="https://github.com/Kitaroo/Clown-Userbot/commits/Clown-Userbot"><img src="https://img.shields.io/github/last-commit/Kitaroo/Clown-Usrrbot?color=ff0000&logo=github&logoColor=ffffff&style=for-the-badge" /></a>
-    <a href="https://github.com/Kitaroo/Clown-Userbot"> <img src="https://img.shields.io/github/repo-size/Kitaroo/Clown-Userbot?logo=github&style=for-the-badge" /></a>
+    <a href="https://github.com/Kitaroo/KITARO-USERBOT/commits/KITARO-USERBOT"><img src="https://img.shields.io/github/last-commit/Kitaroo/KITARO-USERBOT?color=ff0000&logo=github&logoColor=ffffff&style=for-the-badge" /></a>
+    <a href="https://github.com/Kitaroo/KITARO-USERBOT"> <img src="https://img.shields.io/github/repo-size/Kitaroo/KITARO-USERBOT?logo=github&style=for-the-badge" /></a>
     <a href="https://pypi.org/project/Telethon/"><img src="https://img.shields.io/pypi/v/telethon?color=important&label=telethon&logo=python&logoColor=brightgreen&style=for-the-badge" /></a>
     <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.6-green?style=for-the-badge&logo=appveyor"/>
     </p>
