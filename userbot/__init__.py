@@ -291,7 +291,7 @@ BITLY_TOKEN = os.environ.get(
 TERM_ALIAS = os.environ.get("TERM_ALIAS", "KITARO-USERBOT")
 
 # Bot Version
-BOT_VER = os.environ.get("BOT_VER", "3.1.6")
+BOT_VER = os.environ.get("BOT_VER", "3.1.5")
 
 # Default .alive Username
 ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
