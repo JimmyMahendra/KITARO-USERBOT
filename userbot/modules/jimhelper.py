@@ -7,8 +7,8 @@ from userbot.utils import edit_or_reply, jim_cmd
 async def usit(e):
     await edit_or_reply(e,
                         f"**Halo {owner} Jika Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `{cmd}help` Atau Bisa Minta Bantuan Ke:\n"
-                        "\n[Telegram](t.me/KitaroHeyy)"
-                        "\n[Repo](https://github.com/S/KITARO-USERBOT)"
+                        "\n[Telegram](t.me/IamKitaro)"
+                        "\n[Repo](https://github.com/S/Clown-Userbot)"
                         "\n[Support](t.me/rumahkitaro3)")
 
 
@@ -16,13 +16,13 @@ async def usit(e):
 async def var(m):
     await edit_or_reply(m,
                         f"**Disini Daftar Vars Dari {owner}:**\n"
-                        "\n[DAFTAR VARS](https://raw.githubusercontent.com/Kitaroo/KITARO-USERBOT/KITARO-USERBOT/varshelper.txt)")
+                        "\n[DAFTAR VARS](https://raw.githubusercontent.com/Kitaroo/Clown-Userbot/Clown-Userbot/varshelper.txt)")
 
 
 CMD_HELP.update({
     "helper":
     f"`{cmd}lhelp`\
-\nUsage: Bantuan Untuk KITARO-USERBOT.\
+\nUsage: Bantuan Untuk Clown-Userbot.\
 \n`{cmd}vars`\
 \nUsage: Melihat Daftar Vars."
 })
